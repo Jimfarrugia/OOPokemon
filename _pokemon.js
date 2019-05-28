@@ -2,8 +2,8 @@ import { types } from './_types';
 import { abilities } from './_abilities';
 
 export class Pokemon {
-  constructor(name, cry, type) {
-    this.level = 1;
+  constructor(name, cry, type, level) {
+    this.level = level;
     this.hp = 50;
     this.name = name;
     cry ? this.cry = cry : this.cry = "goo-goo ga-ga";

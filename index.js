@@ -20,31 +20,30 @@ class Trainer {
 }
 
 class Bulbasaur extends Pokemon {
-  constructor() {
-    super("Bulbasaur", "bulba..!", types["grass"]);
+  constructor(level) {
+    super("Bulbasaur", "bulba..!", types["grass"], level);
     this.moveset.push(abilities["vineWhip"]);
   }
 }
 
 class Charmander extends Pokemon {
-  constructor() {
-    super("Charmander", "charrr..!", types["fire"]);
+  constructor(level) {
+    super("Charmander", "charrr..!", types["fire"], level);
     this.moveset.push(abilities["ember"]);
   }
 }
 
 class Squirtle extends Pokemon {
-  constructor() {
-    super("Squirtle", "squii..!", types["water"]);
+  constructor(level) {
+    super("Squirtle", "squii..!", types["water"], level);
     this.moveset.push(abilities["bubble"]);
   }
 }
 
-console.log("*******************")
 
-let charmander = new Charmander();
-let squirtle = new Squirtle();
-let bulbasaur = new Bulbasaur();
+let charmander = new Charmander(2);
+let squirtle = new Squirtle(3);
+let bulbasaur = new Bulbasaur(4);
 
 console.log("*******************")
 
@@ -62,10 +61,11 @@ console.log(charmander.hp);
 
 console.log("*******************")
 
-let playerRed = new Trainer("Red", [new Squirtle(), new Charmander()]);
+let playerRed = new Trainer("Red", [new Squirtle(1), new Charmander(1)]);
 console.log(playerRed);
 
 console.log("*******************")
+playerRed.team.map(e => console.log(e));
 
 // Battle
 
