@@ -47,11 +47,27 @@ class Pidgey extends Pokemon {
   }
 }
 
+function battle(player1, player2) {
+  
+  if (player1.ableFighters().length < 1) {
+    return `${player2} wins! ${player1} has run out of pokemon!`;
+  }
+  if (player2.ableFighters().length < 1) {
+    return `${player1} wins! ${player2} has run out of pokemon!`;
+  }
+  //console.log(`player1 has ${playerBlue.ableFighters().length} pokemon`)
+
+  player1.ableFighters()[0].attack(player2.ableFighters()[0], 1)
+  console.log(player2.ableFighters()[0])
+}
+
 let playerRed = new Trainer("Red", [new Squirtle(1), new Charmander(1)]);
 //console.log(playerRed);
 
 let playerBlue = new Trainer("Blue", [new Pidgey(1), new Bulbasaur(1)]);
 //console.log(playerBlue);
+
+battle(playerRed, playerBlue);
 
 // game loop...
 // if readyFighters.length is not > 0 for either player at any time, they lose
