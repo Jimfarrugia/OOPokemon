@@ -11,6 +11,9 @@ export const types = {
   "normal": new Type("normal"),
   "fire": new Type("fire", "grass", "water"),
   "water": new Type("water", "fire", "grass"),
-  "grass": new Type("grass", "water", "fire")
+  "grass": new Type("grass", "water", "fire"),
+  "flying": new Type("flying", "bug", "water"),
+  "bug": new Type("bug", "grass", "fire"),
+  "psychic": new Type("psychic", "normal", "bug")
   //"name": Type("name", "goodMatchup", "badMatchup")
 }

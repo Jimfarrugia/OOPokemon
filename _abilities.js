@@ -20,6 +20,7 @@ export const abilities = {
   "tackle": new Ability("tackle", 10),
   "ember": new Ability("ember", 15, types["fire"]),
   "bubble": new Ability("bubble", 15, types["water"]),
-  "vineWhip": new Ability("vine whip", 15, types["grass"])
+  "vineWhip": new Ability("vine whip", 15, types["grass"]),
+  "gust": new Ability("gust", 15, types["flying"])
   //"name": Ability("name", "power", "type")
 }
