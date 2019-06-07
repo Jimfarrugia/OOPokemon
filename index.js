@@ -47,14 +47,17 @@ class Pidgey extends Pokemon {
   }
 }
 
-function battle(player1, player2) {
+const battle = (player1, player2) => {
   
+
   if (player1.ableFighters().length < 1) {
     return `${player2} wins! ${player1} has run out of pokemon!`;
   }
   if (player2.ableFighters().length < 1) {
     return `${player1} wins! ${player2} has run out of pokemon!`;
   }
+
+  //if (player)
   //console.log(`player1 has ${playerBlue.ableFighters().length} pokemon`)
 
   player1.ableFighters()[0].attack(player2.ableFighters()[0], 1)
